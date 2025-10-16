@@ -2,7 +2,7 @@
 
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
-import { submitChat } from "./chat/submit";
+import { submitChat } from "./submit";
 
 export default function ChatForm() {
   const {
