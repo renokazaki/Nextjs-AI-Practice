@@ -1,7 +1,7 @@
 "use server";
-import { gemini } from "../agents/lib/gemini";
+import { gemini } from "../../lib/gemini";
 
-export async function getResponse(userMessage: string) {
+export async function submitChat(userMessage: string) {
   const response = await gemini.chat.completions.create({
     model: "gemini-2.0-flash",
     messages: [
