@@ -2,14 +2,21 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "bin": {
+    "my-mcp-server": "./build/index.js"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && tsc && chmod 755 build/index.js",
     "start": "next start",
     "lint": "eslint"
   },
+  "files": [
+    "build"
+  ],
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@modelcontextprotocol/sdk": "^1.20.1",
     "@openai/agents": "^0.1.9",
     "next": "15.5.5",
     "react": "19.1.0",
