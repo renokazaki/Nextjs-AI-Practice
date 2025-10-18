@@ -16,6 +16,13 @@ export default async function Home() {
       icon: "📚",
       color: "bg-green-500 hover:bg-green-600",
     },
+    {
+      title: "MCP",
+      description: "tavilyのMCPを使用したAIエージェント",
+      href: "/vercelaisdk",
+      icon: "🔍",
+      color: "bg-purple-500 hover:bg-purple-600",
+    },
   ];
 
   return (
