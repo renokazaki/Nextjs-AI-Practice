@@ -17,7 +17,7 @@ export default async function Home() {
       color: "bg-green-500 hover:bg-green-600",
     },
     {
-      title: "MCP",
+      title: "AIエージェント X MCP",
       description: "tavilyのMCPを使用したAIエージェント",
       href: "/vercelaisdk",
       icon: "🔍",
@@ -37,7 +37,7 @@ export default async function Home() {
               </h1>
             </div>
             <div className="text-sm text-gray-500">
-              Powered by OpenAI Agents and Gemini AI
+              Powered by OpenAI Agents and vercel ai sdk and Gemini AI
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default async function Home() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             様々なAI機能を試すことができるダッシュボードです。
-            チャットボットや言語学習エージェントなど、多彩なAIアシスタントをご利用いただけます。
+            チャットボットや言語学習エージェント、MCPを活用したAIエージェントなど、多彩なAIアシスタントをご利用いただけます。
           </p>
         </div>
 
