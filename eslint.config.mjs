@@ -22,6 +22,10 @@ const eslintConfig = [
     rules: {
       // "no-console": "warn",
       // indent: ["error", 2],
+      // "@typescript-eslint/consistent-type-imports": [
+      //   "error",
+      //   { prefer: "type-imports" },
+      // ],
     },
   },
 ];
