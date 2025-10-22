@@ -2,9 +2,9 @@ name: lint-and-prettier-check
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 env:
   NODE_VERSION: "20.11.1"
@@ -17,11 +17,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          cache: "npm"
       - run: npm ci
       - name: Run lint
         run: npm run lint
-      - name: Run prettier
-        run: npm run format
+      - name: Run prettier check # ← 名前変更
+        run: npm run format:check # ← formatからformat:checkに変更。CIではチェックのみにすべき
       - name: Run typecheck
         run: npm run typecheck
