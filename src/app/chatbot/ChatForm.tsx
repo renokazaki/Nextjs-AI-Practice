@@ -14,7 +14,7 @@ export default function ChatForm() {
     formState: { errors, isSubmitting },
   } = useForm<InputSchemaType>({ resolver: zodResolver(inputSchema) });
   const [response, setResponse] = useState<{ content: string | null } | null>(
-    null
+    null,
   );
 
   const onSubmit: SubmitHandler<InputSchemaType> = async (data) => {

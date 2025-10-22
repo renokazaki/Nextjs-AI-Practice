@@ -12,5 +12,5 @@ export const gemini = new OpenAI({
 // 恐らくopenAIのエージェントを使う場合はこのgeminiModelを別途設定する必要がある。
 export const geminiModel = new OpenAIChatCompletionsModel(
   gemini,
-  "gemini-2.0-flash"
+  "gemini-2.0-flash",
 );
