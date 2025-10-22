@@ -43,7 +43,7 @@ export default function Home() {
       setResult(data);
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "予期しないエラーが発生しました"
+        err instanceof Error ? err.message : "予期しないエラーが発生しました",
       );
     } finally {
       setLoading(false);
@@ -183,7 +183,7 @@ export default function Home() {
                             toolResult.output.content.map(
                               (
                                 content: { type: string; text: string },
-                                contentIdx: number
+                                contentIdx: number,
                               ) => (
                                 <div
                                   key={contentIdx}
@@ -200,13 +200,13 @@ export default function Home() {
                                           : JSON.stringify(
                                               content.text,
                                               null,
-                                              2
+                                              2,
                                             )}
                                       </div>
                                     </div>
                                   )}
                                 </div>
-                              )
+                              ),
                             )}
 
                           {/* 直接結果がある場合（Tavily形式） */}

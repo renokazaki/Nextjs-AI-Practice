@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     console.log("TAVILY_API_KEY exists:", !!process.env.TAVILY_API_KEY);
     console.log(
       "TAVILY_API_KEY first 10 chars:",
-      process.env.TAVILY_API_KEY?.substring(0, 10)
+      process.env.TAVILY_API_KEY?.substring(0, 10),
     );
 
     // ✅ URLパラメータ方式に変更（より確実）
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     }
 
     const mcpUrl = new URL(
-      `https://mcp.tavily.com/mcp/?tavilyApiKey=${tavilyApiKey}`
+      `https://mcp.tavily.com/mcp/?tavilyApiKey=${tavilyApiKey}`,
     );
 
     mcpClient = await experimental_createMCPClient({
@@ -73,7 +73,7 @@ export async function POST(req: Request) {
         console.log(`  ${index + 1}. ツール名: ${toolResult.toolName}`);
         console.log(`     結果タイプ: ${typeof toolResult.output}`);
         console.log(
-          `     結果サイズ: ${JSON.stringify(toolResult.output).length}文字`
+          `     結果サイズ: ${JSON.stringify(toolResult.output).length}文字`,
         );
       });
     }
@@ -92,7 +92,7 @@ export async function POST(req: Request) {
         error: "検索に失敗しました",
         details: error instanceof Error ? error.message : "不明なエラー",
       },
-      { status: 500 }
+      { status: 500 },
     );
   } finally {
     // 必ずクライアントを閉じる
