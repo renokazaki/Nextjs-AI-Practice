@@ -19,7 +19,6 @@ jobs:
         uses: ./.github/actions/setup
         with:
           node-version: ${{ env.NODE_VERSION }}
-          npm-version: ${{ env.NPM_VERSION }}
 
   lint:
     needs: setup
@@ -29,7 +28,6 @@ jobs:
       - uses: ./.github/actions/setup
         with:
           node-version: ${{ env.NODE_VERSION }}
-          npm-version: ${{ env.NPM_VERSION }}
       - run: npm run lint
 
   prettier:
@@ -40,7 +38,6 @@ jobs:
       - uses: ./.github/actions/setup
         with:
           node-version: ${{ env.NODE_VERSION }}
-          npm-version: ${{ env.NPM_VERSION }}
       - run: npx prettier --check .
 
   typecheck:
@@ -51,5 +48,4 @@ jobs:
       - uses: ./.github/actions/setup
         with:
           node-version: ${{ env.NODE_VERSION }}
-          npm-version: ${{ env.NPM_VERSION }}
       - run: npm run typecheck
