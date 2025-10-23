@@ -19,3 +19,18 @@ ciでチェックを行い問題があれば弾き修正してもらうでもい
 ```bash
 npm run quality:check
 ```
+
+
+// .vscode/settings.json
+
+```
+内容については再度確認
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
+
+```
