@@ -23,5 +23,7 @@ jobs:
         run: npm run lint
       - name: Run prettier check # ← 名前変更
         run: npm run format:check # ← formatからformat:checkに変更。CIではチェックのみにすべき
+      - name: Build
+        run: npm run build
       - name: Run typecheck
         run: npm run typecheck
