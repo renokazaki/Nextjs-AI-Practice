@@ -1,8 +1,8 @@
 "use server";
 import { Agent, run, tool } from "@openai/agents";
-import { geminiModel } from "../../../lib/gemini";
+import { geminiModel } from "@/lib/gemini";
 import { z } from "zod";
-import { analyzeWords } from "./actions/language";
+import { analyzeWords } from "@/actions/agent/language";
 
 if (!geminiModel) {
   throw new Error("geminiModel is not set");
