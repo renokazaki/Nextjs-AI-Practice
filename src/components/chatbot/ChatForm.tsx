@@ -2,10 +2,10 @@
 
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
-import { submitChat } from "./actions/chat";
-import { InputSchemaType } from "../../../schemas/inputSchema";
+import { submitChat } from "@/actions/chatbot/chat";
+import { InputSchemaType } from "@/schemas/inputSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { inputSchema } from "../../../schemas/inputSchema";
+import { inputSchema } from "@/schemas/inputSchema";
 
 export default function ChatForm() {
   const {
