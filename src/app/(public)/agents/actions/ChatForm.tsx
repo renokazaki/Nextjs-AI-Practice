@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import { getAgentResponse } from "../agents";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { InputSchemaType } from "../../schema/inputSchema";
+import { InputSchemaType } from "../../../schemas/inputSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { inputSchema } from "../../schema/inputSchema";
+import { inputSchema } from "../../../schemas/inputSchema";
 
 export default function AgentsPage() {
   const {

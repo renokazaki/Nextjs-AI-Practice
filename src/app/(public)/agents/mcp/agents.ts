@@ -1,6 +1,6 @@
 "use server";
 import { Agent, run, MCPServerStreamableHttp } from "@openai/agents";
-import { geminiModel } from "../../lib/gemini";
+import { geminiModel } from "../../../lib/gemini";
 
 export async function getAgentResponse(userMessage: string) {
   const mcpServer = new MCPServerStreamableHttp({

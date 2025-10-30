@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default async function Home() {
+export default function HomePage() {
   const features = [
     {
       title: "ChatBot",

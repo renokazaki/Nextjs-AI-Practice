@@ -1,5 +1,5 @@
 "use server";
-import { gemini } from "../../lib/gemini";
+import { gemini } from "../../../lib/gemini";
 
 export async function submitChat(userMessage: string) {
   const response = await gemini.chat.completions.create({
