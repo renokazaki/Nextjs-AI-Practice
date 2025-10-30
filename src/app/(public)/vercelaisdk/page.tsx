@@ -27,7 +27,7 @@ export default function Home() {
     setResult(null);
 
     try {
-      const response = await fetch("/api/search", {
+      const response = await fetch("/api/vercelaisdk", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
@@ -69,7 +69,6 @@ export default function Home() {
             </span>
           </div>
         </div>
-
         <form onSubmit={handleSubmit} className="mb-8">
           <div className="flex gap-2">
             <input
@@ -89,14 +88,12 @@ export default function Home() {
             </button>
           </div>
         </form>
-
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg mb-8">
             <div className="font-medium">エラーが発生しました</div>
             <div className="text-sm mt-1">{error}</div>
           </div>
         )}
-
         {result && (
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">検索結果</h2>
@@ -272,7 +269,6 @@ export default function Home() {
             </div>
           </div>
         )}
-
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-500 mb-3">💡 試してみよう:</p>
           <div className="flex flex-wrap justify-center gap-2">
@@ -284,32 +280,22 @@ export default function Home() {
               AIトレンド
             </button>
             <button
-              onClick={() => setQuery("日本の最新テクノロジーニュース")}
+              onClick={() => setQuery("2025年のフロントエンド技術のトレンド")}
               className="px-4 py-2 text-sm bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
               disabled={loading}
             >
-              テックニュース
+              フロントエンド技術のトレンド
             </button>
+
             <button
-              onClick={() => setQuery("量子コンピューターの最新研究")}
+              onClick={() => setQuery("2025年のバックエンド技術のトレンド")}
               className="px-4 py-2 text-sm bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
               disabled={loading}
             >
-              量子コンピューター
-            </button>
-            <button
-              onClick={() => setQuery("Vercel AI SDKの最新機能")}
-              className="px-4 py-2 text-sm bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-              disabled={loading}
-            >
-              Vercel AI SDK
+              バックエンド技術のトレンド
             </button>
           </div>
-        </div>
-
-        <div className="mt-8 text-center text-xs text-gray-400">
-          <p>Powered by Gemini 2.5 Flash × Tavily MCP (StreamableHTTP)</p>
-        </div>
+        </div>{" "}
       </div>
     </div>
   );
