@@ -1,4 +1,4 @@
-import ChatForm from "./ChatForm";
+import ChatForm from "@/components/chatbot/ChatForm";
 
 export default function ChatBot() {
   return (

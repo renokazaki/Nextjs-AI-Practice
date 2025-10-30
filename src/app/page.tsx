@@ -1,30 +1,8 @@
 import Link from "next/link";
+import { featureList } from "../constants/featureList";
 
-export default async function Home() {
-  const features = [
-    {
-      title: "ChatBot",
-      description: "Gemini APIを使用したシンプルなチャットボット",
-      href: "/chatbot",
-      icon: "💬",
-      color: "bg-blue-500 hover:bg-blue-600",
-    },
-    {
-      title: "Language Learning Agent",
-      description: "単語から学習用例文を自動生成するAIエージェント",
-      href: "/agents",
-      icon: "📚",
-      color: "bg-green-500 hover:bg-green-600",
-    },
-    {
-      title: "MCP",
-      description: "tavilyのMCPを使用したAIエージェント",
-      href: "/vercelaisdk",
-      icon: "🔍",
-      color: "bg-purple-500 hover:bg-purple-600",
-    },
-  ];
-
+export default function HomePage() {
+  const features = featureList;
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Header */}
@@ -47,9 +25,6 @@ export default async function Home() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Welcome Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Welcome to AI Agent Dashboard
-          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             様々なAI機能を試すことができるダッシュボードです。
             チャットボットや言語学習エージェントなど、多彩なAIアシスタントをご利用いただけます。
@@ -75,19 +50,6 @@ export default async function Home() {
                     className={`inline-flex items-center px-6 py-3 rounded-lg text-white font-medium transition-colors ${feature.color}`}
                   >
                     <span>開始する</span>
-                    <svg
-                      className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
                   </div>
                 </div>
               </div>

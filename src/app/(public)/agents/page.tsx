@@ -1,4 +1,4 @@
-import ChatForm from "./actions/ChatForm";
+import ChatForm from "@/components/agent/ChatForm";
 
 export default function AgentsPage() {
   return (
