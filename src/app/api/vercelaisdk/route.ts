@@ -1,4 +1,5 @@
-import { experimental_createMCPClient, generateText } from "ai";
+import { generateText } from "ai";
+import { experimental_createMCPClient } from "@ai-sdk/mcp";
 import { google } from "@ai-sdk/google";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 
@@ -32,7 +33,8 @@ export async function POST(req: Request) {
     mcpClient = await experimental_createMCPClient({
       transport: new StreamableHTTPClientTransport(mcpUrl),
     });
-    // MCPサーバーからツールを取得
+
+    // MCPサーバーからツールを取得（自動的にAI SDK形式に変換される）
     const tools = await mcpClient.tools();
     console.log("🔧 利用可能なツール数:", tools.length);
 

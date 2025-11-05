@@ -20,4 +20,11 @@ export const featureList = [
     icon: "🔍",
     color: "bg-purple-500 hover:bg-purple-600",
   },
+  {
+    title: "Vercel AI UI",
+    description: "Vercel AI SDK UIを使用したチャットインターフェース",
+    href: "/aisdkui",
+    icon: "🤖",
+    color: "bg-indigo-500 hover:bg-indigo-600",
+  },
 ];
