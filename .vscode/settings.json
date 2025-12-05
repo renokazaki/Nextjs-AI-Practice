@@ -1,6 +1,10 @@
 {
-  //editor.codeActionsOnSave 設定は、ファイル保存時に ESLint での自動修正を実行します。
+  // ファイル保存時に ESLint での自動修正を実行
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  }
+    "source.fixAll.eslint": true
+  },
+  // Prettier をデフォルトフォーマッタとして設定
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // ファイル保存時に自動フォーマットを有効化
+  "editor.formatOnSave": true
 }
